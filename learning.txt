@@ -1,0 +1,86 @@
+------------------------------------------
+SysML (Systems Modelling Language)
+------------------------------------------
+
+Standard engineering language to describing systems.
+
+Intended for specifying, analysing, designing and verifying systems for hardware, software, people, procedures.
+
+
+Two generations of SysML
+
+- SysML v1.x - traditional diagrams
+- SysML v2.x - redesigned schematics and better graphical and textual notation
+
+
+9 Major SysML v1 diagram types
+
+Structure | BDD - Define blocks and hierarchy
+
+Structure | IBD - Internal parts and interfaces
+
+Structure | Package - Organise the model
+
+Behaviour | Activity - Workflow/function flow
+
+Behaviour | State Machine - Modes and transitions
+
+Behaviour | Sequence - Interactions over time
+
+Behaviour | Use Case - High-level system functionality
+
+Requirements | Requirement Diagram - Requirements + traceability
+
+Analysis | Parametric Diagram - Equations / Constraints
+
+
+
+Concepts for Waturbine Controls scheme modelling
+
+Block - A type of thing in the system
+
+Part Property - Particular usage of a block inside another block
+
+BDD - Defines what things exist and their hierarchy
+
+IBD - Shows how the parts inside one block connect
+
+Port - An interaction point on a block
+
+Connector - Connects two ports/parts
+
+Item Flow - Says what actually travels over a connector
+
+Requirement - Something the system must satisfy
+
+<<satisfy>> - Design element --> requirement
+
+<<verify>> - Test --> requirement
+
+<deriveReqt>> - Lower-level requirement --> source requirement
+
+
+
+structure
+
+Waturbine-sysml/
+|
+|-- README.md
+|
+|-- diagrams/
+|	|
+|	|-- 01-waturbine-bdd.png
+|	|
+|	|-- 02-waturbine-ibd.png
+|	|
+|	|-- 03-requirements-traceability.png
+|
+|
+|-- model/
+|	|
+|	|-- [SysML model file]
+|
+|
+|-- docs/
+	|
+	|-- requirements.md

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.omg.org/spec/UML/20161101" xmlns:sysml="http://www.omg.org/spec/SysML/20181001/SysML" xmlns:StandardProfile="http://www.omg.org/spec/UML/20161101/StandardProfile">
+  <xmi:Documentation exporter="SysML Studio" exporterVersion="1.0"/>
+  <uml:Model xmi:type="uml:Model" xmi:id="_model" name="WATurbine Control SysML">
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_model_sysml">
+      <appliedProfile href="http://www.omg.org/spec/SysML/20181001/SysML.xmi#SysML"/>
+    </profileApplication>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pkg_view_2tzens8e" name="Block Definition">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_WATurbineControlSystem" name="WATurbineControlSystem">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_WATurbineControlSystem_prop_powerSystem" name="powerSystem" aggregation="composite" type="_Class_PowerSystem" association="_assoc_rel_12"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_WATurbineControlSystem_prop_actuatorSystem" name="actuatorSystem" aggregation="composite" type="_Class_ActuatorSystem" association="_assoc_rel_13"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_WATurbineControlSystem_prop_controlUnit" name="controlUnit" aggregation="composite" type="_Class_ControlUnit" association="_assoc_rel_14"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_WATurbineControlSystem_prop_safetySystem" name="safetySystem" aggregation="composite" type="_Class_SafetySystem" association="_assoc_rel_15"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_WATurbineControlSystem_prop_sensorSystem" name="sensorSystem" aggregation="composite" type="_Class_SensorSystem" association="_assoc_rel_16"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_ControlUnit" name="ControlUnit" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_ControlUnit_prop_eSP32Controller" name="eSP32Controller" aggregation="composite" type="_Class_ESP32Controller" association="_assoc_rel_51"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_ControlUnit_port_Port1" name="Port1" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_ControlUnit_port_Port2" name="Port2" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_ControlUnit_port_Port3" name="Port3" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_ControlUnit_port_Port4" name="Port4" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_ControlUnit_port_Port5" name="Port5" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_ControlUnit_port_Port6" name="Port6" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_ControlUnit_port_Port7" name="Port7" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_ControlUnit_port_Port8" name="Port8" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_ControlUnit_port_Port9" name="Port9" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_ControlUnit_port_Port10" name="Port10" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_ActuatorSystem" name="ActuatorSystem" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_ActuatorSystem_prop_pitchActuator" name="pitchActuator" aggregation="composite" type="_Class_PitchActuator" association="_assoc_rel_47"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_ActuatorSystem_prop_yawMotor" name="yawMotor" aggregation="composite" type="_Class_YawMotor" association="_assoc_rel_48"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_ActuatorSystem_prop_servoBrake" name="servoBrake" aggregation="composite" type="_Class_ServoBrake" association="_assoc_rel_49"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_ActuatorSystem_prop_eBrakeSolenoid" name="eBrakeSolenoid" aggregation="composite" type="_Class_EBrakeSolenoid" association="_assoc_rel_50"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_PowerSystem" name="PowerSystem" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_PowerSystem_prop_12VPower_rail" name="12VPower rail" aggregation="composite" type="_Class_12VPower_rail" association="_assoc_rel_38"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_PowerSystem_prop_5VStepDown_Converter" name="5VStepDown Converter" aggregation="composite" type="_Class_5VStepDown_Converter" association="_assoc_rel_39"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_PowerSystem_prop_3.3VStepDown_converter" name="3.3VStepDown converter" aggregation="composite" type="_Class_3.3VStepDown_converter" association="_assoc_rel_40"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_SafetySystem" name="SafetySystem" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_SafetySystem_prop_eStop" name="eStop" aggregation="composite" type="_Class_EStop" association="_assoc_rel_27"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_SafetySystem_prop_fuse" name="fuse" aggregation="composite" type="_Class_Fuse" association="_assoc_rel_28"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_SafetySystem_prop_limitSwitch" name="limitSwitch" aggregation="composite" type="_Class_LimitSwitch" association="_assoc_rel_29"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_SensorSystem" name="SensorSystem" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_SensorSystem_prop_thermistor_5_" name="thermistor[5]" aggregation="composite" type="_Class_Thermistor_5_" association="_assoc_rel_30"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_SensorSystem_prop_windVane" name="windVane" aggregation="composite" type="_Class_WindVane" association="_assoc_rel_31"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_SensorSystem_prop_anemometer" name="anemometer" aggregation="composite" type="_Class_Anemometer" association="_assoc_rel_32"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_SensorSystem_prop_anemometer2" name="anemometer2" aggregation="composite" type="_Class_Anemometer" association="_assoc_rel_33"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_SensorSystem_prop_gyroscope" name="gyroscope" aggregation="composite" type="_Class_Gyroscope" association="_assoc_rel_34"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_SensorSystem_prop_rPM_Sensor" name="rPM Sensor" aggregation="composite" type="_Class_RPM_Sensor" association="_assoc_rel_46"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_ESP32Controller" name="ESP32Controller" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_Thermistor_5_" name="Thermistor[5]" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_RPM_Sensor" name="RPM Sensor" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_WindVane" name="WindVane" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_WindVane_port_Port1" name="Port1" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_Anemometer" name="Anemometer" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_Anemometer_port_Port1" name="Port1" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_Gyroscope" name="Gyroscope" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_Gyroscope_port_Port1" name="Port1" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_EStop" name="EStop">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_EStop_port_Port1" name="Port1" aggregation="composite"/>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_EStop_port_Port2" name="Port2" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_Fuse" name="Fuse"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_LimitSwitch" name="LimitSwitch"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_12VPower_rail" name="12VPower rail" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_5VStepDown_Converter" name="5VStepDown Converter" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_3.3VStepDown_converter" name="3.3VStepDown converter" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_PitchActuator" name="PitchActuator" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_PitchActuator_port_Port1" name="Port1" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_YawMotor" name="YawMotor" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_YawMotor_port_Port1" name="Port1" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_ServoBrake" name="ServoBrake" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_ServoBrake_port_Port1" name="Port1" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_EBrakeSolenoid" name="EBrakeSolenoid" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_EBrakeSolenoid_port_Port1" name="Port1" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_12" memberEnd="_Class_WATurbineControlSystem_prop_powerSystem _assoc_rel_12_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_12_end" type="_Class_WATurbineControlSystem" association="_assoc_rel_12"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_13" memberEnd="_Class_WATurbineControlSystem_prop_actuatorSystem _assoc_rel_13_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_13_end" type="_Class_WATurbineControlSystem" association="_assoc_rel_13"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_14" memberEnd="_Class_WATurbineControlSystem_prop_controlUnit _assoc_rel_14_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_14_end" type="_Class_WATurbineControlSystem" association="_assoc_rel_14"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_15" memberEnd="_Class_WATurbineControlSystem_prop_safetySystem _assoc_rel_15_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_15_end" type="_Class_WATurbineControlSystem" association="_assoc_rel_15"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_16" memberEnd="_Class_WATurbineControlSystem_prop_sensorSystem _assoc_rel_16_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_16_end" type="_Class_WATurbineControlSystem" association="_assoc_rel_16"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_27" memberEnd="_Class_SafetySystem_prop_eStop _assoc_rel_27_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_27_end" type="_Class_SafetySystem" association="_assoc_rel_27"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_28" memberEnd="_Class_SafetySystem_prop_fuse _assoc_rel_28_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_28_end" type="_Class_SafetySystem" association="_assoc_rel_28"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_29" memberEnd="_Class_SafetySystem_prop_limitSwitch _assoc_rel_29_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_29_end" type="_Class_SafetySystem" association="_assoc_rel_29"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_30" memberEnd="_Class_SensorSystem_prop_thermistor_5_ _assoc_rel_30_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_30_end" type="_Class_SensorSystem" association="_assoc_rel_30"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_31" memberEnd="_Class_SensorSystem_prop_windVane _assoc_rel_31_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_31_end" type="_Class_SensorSystem" association="_assoc_rel_31"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_32" memberEnd="_Class_SensorSystem_prop_anemometer _assoc_rel_32_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_32_end" type="_Class_SensorSystem" association="_assoc_rel_32"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_33" memberEnd="_Class_SensorSystem_prop_anemometer2 _assoc_rel_33_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_33_end" type="_Class_SensorSystem" association="_assoc_rel_33"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_34" memberEnd="_Class_SensorSystem_prop_gyroscope _assoc_rel_34_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_34_end" type="_Class_SensorSystem" association="_assoc_rel_34"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_38" memberEnd="_Class_PowerSystem_prop_12VPower_rail _assoc_rel_38_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_38_end" type="_Class_PowerSystem" association="_assoc_rel_38"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_39" memberEnd="_Class_PowerSystem_prop_5VStepDown_Converter _assoc_rel_39_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_39_end" type="_Class_PowerSystem" association="_assoc_rel_39"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_40" memberEnd="_Class_PowerSystem_prop_3.3VStepDown_converter _assoc_rel_40_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_40_end" type="_Class_PowerSystem" association="_assoc_rel_40"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_46" memberEnd="_Class_SensorSystem_prop_rPM_Sensor _assoc_rel_46_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_46_end" type="_Class_SensorSystem" association="_assoc_rel_46"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_47" memberEnd="_Class_ActuatorSystem_prop_pitchActuator _assoc_rel_47_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_47_end" type="_Class_ActuatorSystem" association="_assoc_rel_47"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_48" memberEnd="_Class_ActuatorSystem_prop_yawMotor _assoc_rel_48_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_48_end" type="_Class_ActuatorSystem" association="_assoc_rel_48"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_49" memberEnd="_Class_ActuatorSystem_prop_servoBrake _assoc_rel_49_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_49_end" type="_Class_ActuatorSystem" association="_assoc_rel_49"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_50" memberEnd="_Class_ActuatorSystem_prop_eBrakeSolenoid _assoc_rel_50_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_50_end" type="_Class_ActuatorSystem" association="_assoc_rel_50"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_assoc_rel_51" memberEnd="_Class_ControlUnit_prop_eSP32Controller _assoc_rel_51_end">
+        <ownedEnd xmi:type="uml:Property" xmi:id="_assoc_rel_51_end" type="_Class_ControlUnit" association="_assoc_rel_51"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pkg_view_vsx1wcwx" name="Internal Block">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_Internal_Block" name="Internal Block">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_Internal_Block_prop_controller" name="controller" aggregation="composite" type="_Class_ControlUnit"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_Internal_Block_prop_rpmSensor" name="rpmSensor" aggregation="composite" type="_Class_RPMSensor"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_Internal_Block_prop_thermistors" name="thermistors" aggregation="composite" type="_Class_Thermistor__5_"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_Internal_Block_prop_windVane" name="windVane" aggregation="composite" type="_Class_WindVane"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_Internal_Block_prop_gyroscope" name="gyroscope" aggregation="composite" type="_Class_Gyroscope"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_Internal_Block_prop_pitchActuator" name="pitchActuator" aggregation="composite" type="_Class_PitchActuator"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_Internal_Block_prop_yawMotor" name="yawMotor" aggregation="composite" type="_Class_YawMotor"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_Internal_Block_prop_servoBrake" name="servoBrake" aggregation="composite" type="_Class_ServoBrake"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_Internal_Block_prop_eBrakeSolenoid" name="eBrakeSolenoid" aggregation="composite" type="_Class_EBrakeSolenoid"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_Internal_Block_prop_eStop" name="eStop" aggregation="composite" type="_Class_EStop"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Class_Internal_Block_prop_anemometer" name="anemometer" aggregation="composite" type="_Class_Anemometer"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_itemflow_rel_25" conveyed="_Class_temperatureData" informationSource="_Class_Internal_Block_prop_thermistors" informationTarget="_Class_Internal_Block_prop_controller"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_itemflow_rel_26" conveyed="_Class_rotorSpeed" informationSource="_Class_Internal_Block_prop_rpmSensor" informationTarget="_Class_Internal_Block_prop_controller"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_itemflow_rel_27" conveyed="_Class_windSpeed" informationSource="_Class_Internal_Block_prop_anemometer" informationTarget="_Class_Internal_Block_prop_controller"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_itemflow_rel_28" conveyed="_Class_windDirection" informationSource="_Class_Internal_Block_prop_windVane" informationTarget="_Class_Internal_Block_prop_controller"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_itemflow_rel_29" conveyed="_Class_orientationData" informationSource="_Class_Internal_Block_prop_gyroscope" informationTarget="_Class_Internal_Block_prop_controller"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_itemflow_rel_30" conveyed="_Class_brakeCommand" informationSource="_Class_Internal_Block_prop_controller" informationTarget="_Class_Internal_Block_prop_servoBrake"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_itemflow_rel_31" conveyed="_Class_yawCommand" informationSource="_Class_Internal_Block_prop_controller" informationTarget="_Class_Internal_Block_prop_yawMotor"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_itemflow_rel_32" conveyed="_Class_pitchCommand" informationSource="_Class_Internal_Block_prop_controller" informationTarget="_Class_Internal_Block_prop_pitchActuator"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_itemflow_rel_33" conveyed="_Class_emergencyBrakeCommand" informationSource="_Class_Internal_Block_prop_controller" informationTarget="_Class_Internal_Block_prop_eStop"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_itemflow_rel_34" conveyed="_Class_emergencyStopSignal" informationSource="_Class_Internal_Block_prop_eStop" informationTarget="_Class_Internal_Block_prop_eBrakeSolenoid"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pkg_view_zygeokvk" name="Requirements">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_RPMSensor" name="RPMSensor">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_RPMSensor_port_Port1" name="Port1" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_Thermistor" name="Thermistor"/>
+      <packagedElement xmi:type="uml:Activity" xmi:id="_Activity_EmergencyStopVerificationTest" name="EmergencyStopVerificationTest"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_Control_Unit" name="Control Unit"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Requirement_CTRL-001" name="CTRL-001"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Requirement_CTRL-002" name="CTRL-002"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Requirement_CTRL-003" name="CTRL-003"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Requirement_CTRL-004" name="CTRL-004"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Requirement_CTRL-005" name="CTRL-005"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Requirement_CTRL-006" name="CTRL-006"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Requirement_SAFE-001" name="SAFE-001"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Requirement_SAFE-002" name="SAFE-002"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Requirement_SAFE-001_2" name="SAFE-001"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Requirement_SAFE-001_3" name="SAFE-001"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_satisfy_rel_19" client="_Class_RPMSensor" supplier="_Requirement_CTRL-001"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_satisfy_rel_20" client="_Class_Anemometer" supplier="_Requirement_CTRL-002"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_satisfy_rel_21" client="_Class_WindVane" supplier="_Requirement_CTRL-003"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_satisfy_rel_22" client="_Class_Thermistor" supplier="_Requirement_CTRL-004"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_satisfy_rel_23" client="_Class_PitchActuator" supplier="_Requirement_CTRL-005"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_satisfy_rel_24" client="_Class_YawMotor" supplier="_Requirement_CTRL-006"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_satisfy_rel_25" client="_Class_EStop" supplier="_Requirement_SAFE-001"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_satisfy_rel_26" client="_Class_EBrakeSolenoid" supplier="_Requirement_SAFE-002"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_verify_rel_28" client="_Activity_EmergencyStopVerificationTest" supplier="_Requirement_SAFE-001_2"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_satisfy_rel_17919165419172" client="_Class_Control_Unit" supplier="_Requirement_SAFE-001_3"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pkg_view_f6ppexof" name="State Machine">
+      <packagedElement xmi:type="uml:StateMachine" xmi:id="_StateMachine_view_f6ppexof" name="State Machine">
+        <region xmi:type="uml:Region" xmi:id="_StateMachine_view_f6ppexof_region" name="Region"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_pkg_Types" name="Types">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_Thermistor__5_" name="Thermistor [5]">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_Class_Thermistor__5__port_Port1" name="Port1" aggregation="composite"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_temperatureData" name="temperatureData"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_rotorSpeed" name="rotorSpeed"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_windSpeed" name="windSpeed"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_windDirection" name="windDirection"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_orientationData" name="orientationData"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_brakeCommand" name="brakeCommand"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_yawCommand" name="yawCommand"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_pitchCommand" name="pitchCommand"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_emergencyBrakeCommand" name="emergencyBrakeCommand"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Class_emergencyStopSignal" name="emergencyStopSignal"/>
+    </packagedElement>
+  </uml:Model>
+  <sysml:Block xmi:id="_Class_WATurbineControlSystem_Block" base_Class="_Class_WATurbineControlSystem"/>
+  <sysml:Block xmi:id="_Class_ControlUnit_Block" base_Class="_Class_ControlUnit"/>
+  <sysml:Block xmi:id="_Class_ActuatorSystem_Block" base_Class="_Class_ActuatorSystem"/>
+  <sysml:Block xmi:id="_Class_PowerSystem_Block" base_Class="_Class_PowerSystem"/>
+  <sysml:Block xmi:id="_Class_SafetySystem_Block" base_Class="_Class_SafetySystem"/>
+  <sysml:Block xmi:id="_Class_SensorSystem_Block" base_Class="_Class_SensorSystem"/>
+  <sysml:Block xmi:id="_Class_ESP32Controller_Block" base_Class="_Class_ESP32Controller"/>
+  <sysml:Block xmi:id="_Class_Thermistor_5__Block" base_Class="_Class_Thermistor_5_"/>
+  <sysml:Block xmi:id="_Class_RPM_Sensor_Block" base_Class="_Class_RPM_Sensor"/>
+  <sysml:Block xmi:id="_Class_WindVane_Block" base_Class="_Class_WindVane"/>
+  <sysml:Block xmi:id="_Class_Anemometer_Block" base_Class="_Class_Anemometer"/>
+  <sysml:Block xmi:id="_Class_Gyroscope_Block" base_Class="_Class_Gyroscope"/>
+  <sysml:Block xmi:id="_Class_EStop_Block" base_Class="_Class_EStop"/>
+  <sysml:Block xmi:id="_Class_Fuse_Block" base_Class="_Class_Fuse"/>
+  <sysml:Block xmi:id="_Class_LimitSwitch_Block" base_Class="_Class_LimitSwitch"/>
+  <sysml:Block xmi:id="_Class_12VPower_rail_Block" base_Class="_Class_12VPower_rail"/>
+  <sysml:Block xmi:id="_Class_5VStepDown_Converter_Block" base_Class="_Class_5VStepDown_Converter"/>
+  <sysml:Block xmi:id="_Class_3.3VStepDown_converter_Block" base_Class="_Class_3.3VStepDown_converter"/>
+  <sysml:Block xmi:id="_Class_PitchActuator_Block" base_Class="_Class_PitchActuator"/>
+  <sysml:Block xmi:id="_Class_YawMotor_Block" base_Class="_Class_YawMotor"/>
+  <sysml:Block xmi:id="_Class_ServoBrake_Block" base_Class="_Class_ServoBrake"/>
+  <sysml:Block xmi:id="_Class_EBrakeSolenoid_Block" base_Class="_Class_EBrakeSolenoid"/>
+  <sysml:Block xmi:id="_Class_RPMSensor_Block" base_Class="_Class_RPMSensor"/>
+  <sysml:Block xmi:id="_Class_Thermistor_Block" base_Class="_Class_Thermistor"/>
+  <sysml:TestCase xmi:id="_Activity_EmergencyStopVerificationTest_TestCase" base_Behavior="_Activity_EmergencyStopVerificationTest"/>
+  <sysml:Block xmi:id="_Class_Control_Unit_Block" base_Class="_Class_Control_Unit"/>
+  <sysml:Block xmi:id="_Class_Internal_Block_Block" base_Class="_Class_Internal_Block"/>
+  <sysml:ProxyPort xmi:id="_Class_ControlUnit_port_Port1_ProxyPort" base_Port="_Class_ControlUnit_port_Port1"/>
+  <sysml:ProxyPort xmi:id="_Class_ControlUnit_port_Port2_ProxyPort" base_Port="_Class_ControlUnit_port_Port2"/>
+  <sysml:ProxyPort xmi:id="_Class_ControlUnit_port_Port3_ProxyPort" base_Port="_Class_ControlUnit_port_Port3"/>
+  <sysml:ProxyPort xmi:id="_Class_ControlUnit_port_Port4_ProxyPort" base_Port="_Class_ControlUnit_port_Port4"/>
+  <sysml:ProxyPort xmi:id="_Class_ControlUnit_port_Port5_ProxyPort" base_Port="_Class_ControlUnit_port_Port5"/>
+  <sysml:ProxyPort xmi:id="_Class_ControlUnit_port_Port6_ProxyPort" base_Port="_Class_ControlUnit_port_Port6"/>
+  <sysml:ProxyPort xmi:id="_Class_ControlUnit_port_Port7_ProxyPort" base_Port="_Class_ControlUnit_port_Port7"/>
+  <sysml:ProxyPort xmi:id="_Class_ControlUnit_port_Port8_ProxyPort" base_Port="_Class_ControlUnit_port_Port8"/>
+  <sysml:ProxyPort xmi:id="_Class_ControlUnit_port_Port9_ProxyPort" base_Port="_Class_ControlUnit_port_Port9"/>
+  <sysml:ProxyPort xmi:id="_Class_ControlUnit_port_Port10_ProxyPort" base_Port="_Class_ControlUnit_port_Port10"/>
+  <sysml:ProxyPort xmi:id="_Class_RPMSensor_port_Port1_ProxyPort" base_Port="_Class_RPMSensor_port_Port1"/>
+  <sysml:Block xmi:id="_Class_Thermistor__5__Block" base_Class="_Class_Thermistor__5_"/>
+  <sysml:ProxyPort xmi:id="_Class_Thermistor__5__port_Port1_ProxyPort" base_Port="_Class_Thermistor__5__port_Port1"/>
+  <sysml:ProxyPort xmi:id="_Class_WindVane_port_Port1_ProxyPort" base_Port="_Class_WindVane_port_Port1"/>
+  <sysml:ProxyPort xmi:id="_Class_Gyroscope_port_Port1_ProxyPort" base_Port="_Class_Gyroscope_port_Port1"/>
+  <sysml:ProxyPort xmi:id="_Class_PitchActuator_port_Port1_ProxyPort" base_Port="_Class_PitchActuator_port_Port1"/>
+  <sysml:ProxyPort xmi:id="_Class_YawMotor_port_Port1_ProxyPort" base_Port="_Class_YawMotor_port_Port1"/>
+  <sysml:ProxyPort xmi:id="_Class_ServoBrake_port_Port1_ProxyPort" base_Port="_Class_ServoBrake_port_Port1"/>
+  <sysml:ProxyPort xmi:id="_Class_EBrakeSolenoid_port_Port1_ProxyPort" base_Port="_Class_EBrakeSolenoid_port_Port1"/>
+  <sysml:ProxyPort xmi:id="_Class_EStop_port_Port1_ProxyPort" base_Port="_Class_EStop_port_Port1"/>
+  <sysml:ProxyPort xmi:id="_Class_EStop_port_Port2_ProxyPort" base_Port="_Class_EStop_port_Port2"/>
+  <sysml:ProxyPort xmi:id="_Class_Anemometer_port_Port1_ProxyPort" base_Port="_Class_Anemometer_port_Port1"/>
+  <sysml:Block xmi:id="_Class_temperatureData_Block" base_Class="_Class_temperatureData"/>
+  <sysml:ItemFlow xmi:id="_itemflow_rel_25_ItemFlow" base_InformationFlow="_itemflow_rel_25"/>
+  <sysml:Block xmi:id="_Class_rotorSpeed_Block" base_Class="_Class_rotorSpeed"/>
+  <sysml:ItemFlow xmi:id="_itemflow_rel_26_ItemFlow" base_InformationFlow="_itemflow_rel_26"/>
+  <sysml:Block xmi:id="_Class_windSpeed_Block" base_Class="_Class_windSpeed"/>
+  <sysml:ItemFlow xmi:id="_itemflow_rel_27_ItemFlow" base_InformationFlow="_itemflow_rel_27"/>
+  <sysml:Block xmi:id="_Class_windDirection_Block" base_Class="_Class_windDirection"/>
+  <sysml:ItemFlow xmi:id="_itemflow_rel_28_ItemFlow" base_InformationFlow="_itemflow_rel_28"/>
+  <sysml:Block xmi:id="_Class_orientationData_Block" base_Class="_Class_orientationData"/>
+  <sysml:ItemFlow xmi:id="_itemflow_rel_29_ItemFlow" base_InformationFlow="_itemflow_rel_29"/>
+  <sysml:Block xmi:id="_Class_brakeCommand_Block" base_Class="_Class_brakeCommand"/>
+  <sysml:ItemFlow xmi:id="_itemflow_rel_30_ItemFlow" base_InformationFlow="_itemflow_rel_30"/>
+  <sysml:Block xmi:id="_Class_yawCommand_Block" base_Class="_Class_yawCommand"/>
+  <sysml:ItemFlow xmi:id="_itemflow_rel_31_ItemFlow" base_InformationFlow="_itemflow_rel_31"/>
+  <sysml:Block xmi:id="_Class_pitchCommand_Block" base_Class="_Class_pitchCommand"/>
+  <sysml:ItemFlow xmi:id="_itemflow_rel_32_ItemFlow" base_InformationFlow="_itemflow_rel_32"/>
+  <sysml:Block xmi:id="_Class_emergencyBrakeCommand_Block" base_Class="_Class_emergencyBrakeCommand"/>
+  <sysml:ItemFlow xmi:id="_itemflow_rel_33_ItemFlow" base_InformationFlow="_itemflow_rel_33"/>
+  <sysml:Block xmi:id="_Class_emergencyStopSignal_Block" base_Class="_Class_emergencyStopSignal"/>
+  <sysml:ItemFlow xmi:id="_itemflow_rel_34_ItemFlow" base_InformationFlow="_itemflow_rel_34"/>
+  <sysml:Requirement xmi:id="_Requirement_CTRL-001_Requirement" base_Class="_Requirement_CTRL-001" text="The control system shall acquire rotor-speed measurements during turbine operation."/>
+  <sysml:Requirement xmi:id="_Requirement_CTRL-002_Requirement" base_Class="_Requirement_CTRL-002" text="The control system shall acquire wind-speed measurements during turbine operation."/>
+  <sysml:Requirement xmi:id="_Requirement_CTRL-003_Requirement" base_Class="_Requirement_CTRL-003" text="The control system shall acquire wind-direction measurements during turbine operation."/>
+  <sysml:Requirement xmi:id="_Requirement_CTRL-004_Requirement" base_Class="_Requirement_CTRL-004" text="The control system shall monitor subsystem temperature measurements.&#10;"/>
+  <sysml:Requirement xmi:id="_Requirement_CTRL-005_Requirement" base_Class="_Requirement_CTRL-005" text="The control system shall provide commands to the blade-pitch actuator."/>
+  <sysml:Requirement xmi:id="_Requirement_CTRL-006_Requirement" base_Class="_Requirement_CTRL-006" text="The control system shall provide commands to the yaw actuation system."/>
+  <sysml:Requirement xmi:id="_Requirement_SAFE-001_Requirement" base_Class="_Requirement_SAFE-001" text="The control system shall enter a safe state upon emergency-stop activation."/>
+  <sysml:Requirement xmi:id="_Requirement_SAFE-002_Requirement" base_Class="_Requirement_SAFE-002" text="The control system shall provide emergency braking capability."/>
+  <sysml:Requirement xmi:id="_Requirement_SAFE-001_2_Requirement" base_Class="_Requirement_SAFE-001_2" text="The control system shall enter a safe state upon emergency-stop activation."/>
+  <sysml:Requirement xmi:id="_Requirement_SAFE-001_3_Requirement" base_Class="_Requirement_SAFE-001_3" text="The control system shall enter a safe state upon emergency-stop activation."/>
+  <sysml:Satisfy xmi:id="_satisfy_rel_19_Satisfy" base_Abstraction="_satisfy_rel_19"/>
+  <sysml:Satisfy xmi:id="_satisfy_rel_20_Satisfy" base_Abstraction="_satisfy_rel_20"/>
+  <sysml:Satisfy xmi:id="_satisfy_rel_21_Satisfy" base_Abstraction="_satisfy_rel_21"/>
+  <sysml:Satisfy xmi:id="_satisfy_rel_22_Satisfy" base_Abstraction="_satisfy_rel_22"/>
+  <sysml:Satisfy xmi:id="_satisfy_rel_23_Satisfy" base_Abstraction="_satisfy_rel_23"/>
+  <sysml:Satisfy xmi:id="_satisfy_rel_24_Satisfy" base_Abstraction="_satisfy_rel_24"/>
+  <sysml:Satisfy xmi:id="_satisfy_rel_25_Satisfy" base_Abstraction="_satisfy_rel_25"/>
+  <sysml:Satisfy xmi:id="_satisfy_rel_26_Satisfy" base_Abstraction="_satisfy_rel_26"/>
+  <sysml:Verify xmi:id="_verify_rel_28_Verify" base_Abstraction="_verify_rel_28"/>
+  <sysml:Satisfy xmi:id="_satisfy_rel_17919165419172_Satisfy" base_Abstraction="_satisfy_rel_17919165419172"/>
+</xmi:XMI>
