@@ -1,54 +1,49 @@
-# WATurbine Control System — SysML / MBSE Model
+# WATurbine SysML / MBSE Model
 
-A SysML model of the WATurbine control architecture, created to explore
-Model-Based Systems Engineering (MBSE) concepts including system decomposition,
-interface modeling, requirements engineering, and traceability.
+A small SysML model of the WATurbine control system, created to explore
+Model-Based Systems Engineering (MBSE), system architecture, interfaces,
+requirements, and traceability.
 
-## System Architecture
+## Block Definition Diagram
 
-The Block Definition Diagram (BDD) decomposes the control system into its
-major subsystems: control, sensing, actuation, power, and safety.
+The BDD decomposes the WATurbine control system into its main subsystems:
+control, sensing, actuation, power, and safety.
 
-![Block Definition Diagram](diagrams/01-bdd.png)
+![Block Definition Diagram](diagrams/sysml-BDD-diagram.png)
 
-## System Interfaces
+## Internal Block Diagram
 
-The Internal Block Diagram (IBD) models the interfaces between sensors,
-the ESP32-based controller, actuators, and safety components.
+The IBD shows how sensors, the control unit, actuators, and safety components
+interact through system-level interfaces and information flows.
 
-Information flows include rotor speed, temperature, wind speed,
-wind direction, orientation data, and actuator commands.
-
-![Internal Block Diagram](diagrams/02-ibd.png)
+![Internal Block Diagram](diagrams/sysml-IBD-diagram.png)
 
 ## Requirements & Traceability
 
-Functional and safety requirements are linked to the design elements
-responsible for satisfying them using SysML `«satisfy»` relationships.
+The requirements diagram links functional and safety requirements to the
+design elements that satisfy them using `«satisfy»` relationships, with an
+example `«verify»` relationship for emergency-stop verification.
 
-A verification test case demonstrates requirement-to-verification
-traceability using `«verify»`.
-
-![Requirements Diagram](diagrams/03-requirements.png)
+![Requirements Diagram](diagrams/sysml-requirement-diagram.png)
 
 ## Concepts Demonstrated
 
 - SysML Block Definition Diagrams (BDD)
 - Internal Block Diagrams (IBD)
 - System decomposition
-- Ports, connectors, and information flows
+- Ports, connectors, and item flows
 - Requirements modeling
 - Requirements-to-design traceability
 - Verification traceability
 - Model-Based Systems Engineering (MBSE)
 
-## Scope
-
-This model focuses on the high-level control architecture of WATurbine.
-Detailed PCB-level circuitry, embedded firmware, and mechanical design
-are outside the scope of this model.
-
 ## Tools
 
 - SysML v1.x
-- SysML Studio
+- SysML Studio (https://app.sysml.pro/)
+
+## Scope
+
+This model focuses on the high-level WATurbine control architecture.
+Detailed PCB circuitry, embedded firmware, and mechanical design are outside
+the scope of this model.
